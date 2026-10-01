@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="direction-widget" role="group" aria-label="Reading direction">
+    <span dir="ltr">LTR</span>
+    <button class="direction-toggle" type="button" role="switch" id="direction-toggle" aria-checked="true" aria-label="Right-to-left reading direction">
+      <span class="direction-toggle-thumb" aria-hidden="true">←</span>
+    </button>
+    <span dir="rtl">RTL</span>
+  </div>
 
   <!-- Header / Hero Section -->
   <header class="hero">
@@ -27,14 +39,14 @@
   </header>
 
   <!-- Timeline Cards Section -->
-  <main>
+  <main id="main-content">
     <section class="timeline-section" aria-labelledby="timeline-title">
       <div class="section-heading">
         <p class="eyebrow">Milestones in motion</p>
         <h2 id="timeline-title">Building a more sustainable future</h2>
         <p>From the first microprocessor to ambitious climate commitments, every milestone moves the industry forward.</p>
       </div>
-      <div class="timeline">
+      <div class="timeline" role="region" aria-label="Scrollable sustainability milestones" tabindex="0">
 
     <!-- Card 1: 1968 -->
     <article class="timeline-item">
@@ -172,7 +184,84 @@
     </article>
       </div>
     </section>
+    <!-- Three columns stack on small screens and sit side by side on larger screens. -->
+    <section class="container py-5" aria-labelledby="impact-title">
+      <div class="mb-4">
+        <p class="eyebrow">Sustainability in action</p>
+        <h2 id="impact-title">Progress across our priorities</h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <article class="h-100 p-4 bg-white border-top border-4 border-primary">
+            <span class="priority-icon climate-icon" aria-hidden="true"><i class="bi bi-cloud-sun-fill"></i></span>
+            <h3 class="h4">Climate</h3>
+            <p class="mb-0">Advancing energy efficiency and renewable electricity across our global operations.</p>
+          </article>
+        </div>
+        <div class="col">
+          <article class="h-100 p-4 bg-white border-top border-4 border-success">
+            <span class="priority-icon water-icon" aria-hidden="true"><i class="bi bi-droplet-fill"></i></span>
+            <h3 class="h4">Water</h3>
+            <p class="mb-0">Working to conserve water and restore more than we use in our operations.</p>
+          </article>
+        </div>
+        <div class="col">
+          <article class="h-100 p-4 bg-white border-top border-4 border-info">
+            <span class="priority-icon waste-icon" aria-hidden="true"><i class="bi bi-recycle"></i></span>
+            <h3 class="h4">Waste</h3>
+            <p class="mb-0">Reducing waste through reuse, recycling, and more resource-efficient manufacturing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- The email field uses the browser's built-in email validation. -->
+    <section class="newsletter-section py-5" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-md-5">
+            <p class="eyebrow">Stay informed</p>
+            <h2 id="newsletter-title">Intel sustainability updates</h2>
+            <p class="mb-0">Get news about our sustainability goals and progress.</p>
+          </div>
+          <div class="col-md-7">
+            <form action="#" method="post">
+              <label class="form-label" for="newsletter-email">Email address</label>
+              <div class="input-group">
+                <input class="form-control" type="email" id="newsletter-email" name="email" dir="ltr" autocomplete="email" required>
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>Scroll to explore <span aria-hidden="true">↓</span></footer>
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+      <p>© 2026 Intel Corporation. All rights reserved.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item"><a href="#privacy-policy">Privacy Policy</a></li>
+          <li class="list-inline-item"><a href="#terms-of-use">Terms of Use</a></li>
+          <li class="list-inline-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    // Change the page direction and update the switch's accessible state.
+    const directionToggle = document.getElementById('direction-toggle');
+
+    directionToggle.addEventListener('click', function () {
+      const isRightToLeft = this.getAttribute('aria-checked') !== 'true';
+      const direction = isRightToLeft ? 'rtl' : 'ltr';
+
+      document.documentElement.dir = direction;
+      this.setAttribute('aria-checked', String(isRightToLeft));
+      this.setAttribute('aria-label', `${isRightToLeft ? 'Right-to-left' : 'Left-to-right'} reading direction`);
+      this.firstElementChild.textContent = isRightToLeft ? '←' : '→';
+    });
+  </script>
 </body>
 </html>
