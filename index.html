@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,8 +14,8 @@
 
   <div class="direction-widget" role="group" aria-label="Reading direction">
     <span dir="ltr">LTR</span>
-    <button class="direction-toggle" type="button" role="switch" id="direction-toggle" aria-checked="true" aria-label="Right-to-left reading direction">
-      <span class="direction-toggle-thumb" aria-hidden="true">←</span>
+    <button class="direction-toggle" type="button" role="switch" id="direction-toggle" aria-checked="false" aria-label="Left-to-right reading direction">
+      <span class="direction-toggle-thumb" aria-hidden="true">→</span>
     </button>
     <span dir="rtl">RTL</span>
   </div>
@@ -215,6 +215,32 @@
       </div>
     </section>
 
+    <section class="container pb-5" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="mb-4">Sustainability questions</h2>
+      <div class="accordion" id="sustainability-faq">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faq-climate-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-climate" aria-expanded="false" aria-controls="faq-climate">
+              How is Intel working to reduce emissions?
+            </button>
+          </h3>
+          <div id="faq-climate" class="accordion-collapse collapse" aria-labelledby="faq-climate-heading" data-bs-parent="#sustainability-faq">
+            <div class="accordion-body">Intel is investing in renewable electricity, energy efficiency, and lower-emission manufacturing as part of its climate goals.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faq-water-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-water" aria-expanded="false" aria-controls="faq-water">
+              What are Intel's water stewardship efforts?
+            </button>
+          </h3>
+          <div id="faq-water" class="accordion-collapse collapse" aria-labelledby="faq-water-heading" data-bs-parent="#sustainability-faq">
+            <div class="accordion-body">Intel works to conserve water in its operations and support water restoration projects in the communities where it operates.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- The email field uses the browser's built-in email validation. -->
     <section class="newsletter-section py-5" aria-labelledby="newsletter-title">
       <div class="container">
@@ -249,19 +275,60 @@
       </nav>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Change the page direction and update the switch's accessible state.
     const directionToggle = document.getElementById('direction-toggle');
 
-    directionToggle.addEventListener('click', function () {
-      const isRightToLeft = this.getAttribute('aria-checked') !== 'true';
+    function setReadingDirection(isRightToLeft) {
       const direction = isRightToLeft ? 'rtl' : 'ltr';
 
       document.documentElement.dir = direction;
-      this.setAttribute('aria-checked', String(isRightToLeft));
-      this.setAttribute('aria-label', `${isRightToLeft ? 'Right-to-left' : 'Left-to-right'} reading direction`);
-      this.firstElementChild.textContent = isRightToLeft ? '←' : '→';
+      directionToggle.setAttribute('aria-checked', String(isRightToLeft));
+      directionToggle.setAttribute('aria-label', `${isRightToLeft ? 'Right-to-left' : 'Left-to-right'} reading direction`);
+      directionToggle.firstElementChild.textContent = isRightToLeft ? '←' : '→';
+    }
+
+    function detectReadingDirection() {
+      const root = document.documentElement;
+      const body = document.body;
+      const translationClasses = `${root.className} ${body.className}`;
+
+      if (translationClasses.includes('translated-rtl')) {
+        setReadingDirection(true);
+        return;
+      }
+
+      if (translationClasses.includes('translated-ltr')) {
+        setReadingDirection(false);
+        return;
+      }
+
+      const language = (body.getAttribute('lang') || root.getAttribute('lang') || '').toLowerCase();
+      const languageCode = language.split('-')[0];
+      const rightToLeftLanguages = new Set(['ar', 'arc', 'ckb', 'dv', 'fa', 'he', 'ks', 'ku', 'ps', 'sd', 'ug', 'ur', 'yi']);
+      setReadingDirection(rightToLeftLanguages.has(languageCode));
+    }
+
+    directionToggle.addEventListener('click', function () {
+      setReadingDirection(this.getAttribute('aria-checked') !== 'true');
     });
+
+    const languageObserver = new MutationObserver(function (mutations) {
+      const directionChanged = mutations.some(function (mutation) {
+        return mutation.attributeName === 'lang' ||
+          (mutation.attributeName === 'class' && (mutation.target === document.documentElement || mutation.target === document.body));
+      });
+
+      if (directionChanged) detectReadingDirection();
+    });
+
+    languageObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class', 'lang'],
+      subtree: true
+    });
+
+    detectReadingDirection();
   </script>
 </body>
 </html>
