@@ -20,6 +20,12 @@ body {
 	font-family: Georgia, 'Times New Roman', serif;
 }
 
+html[lang="ar"] body { font-family: "Noto Naskh Arabic", Tahoma, Arial, sans-serif; }
+
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { line-height: 1.4; }
+
+html[lang="ar"] .eyebrow { letter-spacing: 0; text-transform: none; }
+
 .skip-link {
 	position: fixed;
 	top: 8px;

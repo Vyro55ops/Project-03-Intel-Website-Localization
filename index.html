@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Through the Ages</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <title data-ar="إنتل: الاستدامة عبر العصور">Intel: Sustainability Through the Ages</title>
+  <link id="bootstrap-ltr" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link id="bootstrap-rtl" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" disabled />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-ar="انتقل إلى المحتوى الرئيسي">Skip to main content</a>
 
-  <div class="direction-widget" role="group" aria-label="Reading direction">
-    <span dir="ltr">LTR</span>
-    <button class="direction-toggle" type="button" role="switch" id="direction-toggle" aria-checked="false" aria-label="Left-to-right reading direction">
+  <div class="direction-widget" role="group" aria-label="Language" data-ar-label="اللغة">
+    <span dir="ltr">EN</span>
+    <button class="direction-toggle" type="button" role="switch" id="language-toggle" aria-checked="false" aria-label="Switch language to Arabic">
       <span class="direction-toggle-thumb" aria-hidden="true">→</span>
     </button>
-    <span dir="rtl">RTL</span>
+    <span dir="rtl">عربي</span>
   </div>
 
   <!-- Header / Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img class="intel-logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <p class="eyebrow">A timeline of progress</p>
+      <img class="intel-logo" src="img/intel-header-logo.svg" alt="Intel Logo" data-ar-alt="شعار إنتل" />
+      <p class="eyebrow" data-ar="محطات في مسيرة التقدم">A timeline of progress</p>
       <!-- Main Heading -->
-      <h1>Sustainability<br /><span>Through the Ages</span></h1>
+      <h1><span data-ar="الاستدامة">Sustainability</span><br /><span data-ar="عبر العصور">Through the Ages</span></h1>
 
       <!-- Subheading / Description -->
-      <p class="hero-description">
+      <p class="hero-description" data-ar="استكشف رحلة إنتل عبر الزمن، واكتشف كيف أسهم التزامنا بالابتكار في بناء مستقبل أكثر استدامة للتقنية وكوكبنا.">
         Explore Intel's journey through time, discovering how our commitment
         to innovation has shaped a more sustainable future for technology 
         and our planet.
@@ -42,20 +43,20 @@
   <main id="main-content">
     <section class="timeline-section" aria-labelledby="timeline-title">
       <div class="section-heading">
-        <p class="eyebrow">Milestones in motion</p>
-        <h2 id="timeline-title">Building a more sustainable future</h2>
-        <p>From the first microprocessor to ambitious climate commitments, every milestone moves the industry forward.</p>
+        <p class="eyebrow" data-ar="محطات بارزة في مسيرتنا">Milestones in motion</p>
+        <h2 id="timeline-title" data-ar="نبني مستقبلًا أكثر استدامة">Building a more sustainable future</h2>
+        <p data-ar="من أول معالج دقيق إلى الالتزامات المناخية الطموحة، تدفع كل محطة قطاع التقنية إلى الأمام.">From the first microprocessor to ambitious climate commitments, every milestone moves the industry forward.</p>
       </div>
-      <div class="timeline" role="region" aria-label="Scrollable sustainability milestones" tabindex="0">
+      <div class="timeline" role="region" aria-label="Scrollable sustainability milestones" data-ar-label="محطات الاستدامة، قابلة للتمرير أفقيًا" tabindex="0">
 
     <!-- Card 1: 1968 -->
     <article class="timeline-item">
       <div class="year">1968</div>
       <div class="timeline-card">
-        <img src="img/1.jpg" alt="A close-up view of technology components" />
+        <img src="img/1.jpg" alt="A close-up view of technology components" data-ar-alt="لقطة مقرّبة لمكوّنات تقنية" />
       <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <p>
+      <h3 data-ar="تأسيس إنتل">Intel Founded</h3>
+      <p data-ar="أعاد روبرت نويس وغوردون مور تسمية شركتهما الناشئة NM Electronics إلى Intel Corporation، لتبدأ مسيرة عقود من الابتكار التقني.">
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
         decades of technological innovation.
@@ -67,10 +68,10 @@
     <article class="timeline-item">
       <div class="year">1971</div>
       <div class="timeline-card">
-        <img src="img/2.jpg" alt="A detailed view of a computer processor" />
+        <img src="img/2.jpg" alt="A detailed view of a computer processor" data-ar-alt="صورة تفصيلية لمعالج حاسوبي" />
       <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <p>
+      <h3 data-ar="أول معالج دقيق">First Microprocessor</h3>
+      <p data-ar="أطلقت إنتل المعالج 4004، أول معالج دقيق تجاري في العالم، لتبدأ ثورة المعالجات الدقيقة وتمهّد لمستقبل الحوسبة.">
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
         of computing devices.
@@ -82,10 +83,10 @@
     <article class="timeline-item">
       <div class="year">1978</div>
       <div class="timeline-card">
-        <img src="img/3.jpg" alt="A computer chip on a circuit board" />
+        <img src="img/3.jpg" alt="A computer chip on a circuit board" data-ar-alt="شريحة حاسوبية على لوحة دوائر إلكترونية" />
       <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <p>
+      <h3 data-ar="المعالج 8086">8086 Processor</h3>
+      <p data-ar="أُطلق المعالج 8086، وأرسى بنية x86 التي تشغّل عددًا لا يحصى من الحواسيب الشخصية والخوادم حتى اليوم.">
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
       </p>
@@ -96,10 +97,10 @@
     <article class="timeline-item">
       <div class="year">1985</div>
       <div class="timeline-card">
-        <img src="img/4.jpg" alt="A technology workspace with electronic equipment" />
+        <img src="img/4.jpg" alt="A technology workspace with electronic equipment" data-ar-alt="مساحة عمل تقنية تضم أجهزة إلكترونية" />
       <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <p>
+      <h3 data-ar="المعالج 386">386 Processor</h3>
+      <p data-ar="قدّمت إنتل المعالج 386 ببنية 32 بت، لتبدأ حقبة جديدة من الأداء وتعدد المهام في الحواسيب الشخصية.">
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
         personal computers.
@@ -111,10 +112,10 @@
     <article class="timeline-item">
       <div class="year">2006</div>
       <div class="timeline-card">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="A bright, modern sustainable workplace" />
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="A bright, modern sustainable workplace" data-ar-alt="مساحة عمل حديثة ومشرقة تراعي الاستدامة" />
       <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <p>
+      <h3 data-ar="ذروة انبعاثات غازات الدفيئة">Peak GHG Emissions</h3>
+      <p data-ar="سجّل هذا العام أعلى انبعاثات سنوية لعمليات إنتل. وفي السنوات التالية، استثمرت الشركة في الحد من الانبعاثات والطاقة المتجددة والتصنيع الكفؤ للطاقة.">
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
         chemical abatement, renewable energy, and energy-efficient 
@@ -127,10 +128,10 @@
     <article class="timeline-item">
       <div class="year">2020</div>
       <div class="timeline-card">
-        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=80" alt="A laptop and technology tools on a desk" />
+        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=80" alt="A laptop and technology tools on a desk" data-ar-alt="حاسوب محمول وأدوات تقنية على مكتب" />
       <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <p>
+      <h3 data-ar="استراتيجية RISE">RISE Strategy</h3>
+      <p data-ar="أطلقت إنتل استراتيجية RISE وأهداف 2030 لتعزيز التقدم في العمل المناخي وإدارة المياه وتقليل النفايات.">
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
@@ -142,10 +143,10 @@
     <article class="timeline-item">
       <div class="year">2022</div>
       <div class="timeline-card">
-        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Wind turbines generating clean energy" />
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Wind turbines generating clean energy" data-ar-alt="توربينات رياح تولّد طاقة نظيفة" />
       <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <p>
+      <h3 data-ar="صافي انبعاثات صفري بحلول 2040">Net-Zero By 2040</h3>
+      <p data-ar="أعلنت إنتل التزامها بتحقيق صافي انبعاثات صفري من غازات الدفيئة (النطاقان 1 و2) في عملياتها العالمية بحلول عام 2040.">
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
@@ -157,10 +158,10 @@
     <article class="timeline-item">
       <div class="year">2023</div>
       <div class="timeline-card">
-        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80" alt="Solar panels under a clear sky" />
+        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80" alt="Solar panels under a clear sky" data-ar-alt="ألواح شمسية تحت سماء صافية" />
       <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <p>
+      <h3 data-ar="الكهرباء المتجددة">Renewable Electricity</h3>
+      <p data-ar="حققت الشركة استخدام الكهرباء المتجددة بنسبة 99٪ حول العالم، ما أسهم في خفض الانبعاثات ودعم أهداف الاستدامة طويلة الأمد.">
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
@@ -172,10 +173,10 @@
     <article class="timeline-item">
       <div class="year">2024</div>
       <div class="timeline-card">
-        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80" alt="People collaborating at a sustainability event" />
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80" alt="People collaborating at a sustainability event" data-ar-alt="أشخاص يتعاونون في فعالية للاستدامة" />
       <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <p>
+      <h3 data-ar="قمة الاستدامة">Sustainability Summit</h3>
+      <p data-ar="استضافت إنتل أول قمة للاستدامة، وجمعت المورّدين والمسؤولين الحكوميين وقادة القطاع للتعاون في تصنيع أشباه موصلات أكثر استدامة.">
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
@@ -187,55 +188,55 @@
     <!-- Three columns stack on small screens and sit side by side on larger screens. -->
     <section class="container py-5" aria-labelledby="impact-title">
       <div class="mb-4">
-        <p class="eyebrow">Sustainability in action</p>
-        <h2 id="impact-title">Progress across our priorities</h2>
+        <p class="eyebrow" data-ar="الاستدامة على أرض الواقع">Sustainability in action</p>
+        <h2 id="impact-title" data-ar="التقدم في أولوياتنا">Progress across our priorities</h2>
       </div>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <article class="h-100 p-4 bg-white border-top border-4 border-primary">
             <span class="priority-icon climate-icon" aria-hidden="true"><i class="bi bi-cloud-sun-fill"></i></span>
-            <h3 class="h4">Climate</h3>
-            <p class="mb-0">Advancing energy efficiency and renewable electricity across our global operations.</p>
+            <h3 class="h4" data-ar="المناخ">Climate</h3>
+            <p class="mb-0" data-ar="نعزز كفاءة الطاقة ونزيد استخدام الكهرباء المتجددة في عملياتنا حول العالم.">Advancing energy efficiency and renewable electricity across our global operations.</p>
           </article>
         </div>
         <div class="col">
           <article class="h-100 p-4 bg-white border-top border-4 border-success">
             <span class="priority-icon water-icon" aria-hidden="true"><i class="bi bi-droplet-fill"></i></span>
-            <h3 class="h4">Water</h3>
-            <p class="mb-0">Working to conserve water and restore more than we use in our operations.</p>
+            <h3 class="h4" data-ar="المياه">Water</h3>
+            <p class="mb-0" data-ar="نعمل على ترشيد استهلاك المياه وإعادة كميات تفوق ما نستخدمه في عملياتنا.">Working to conserve water and restore more than we use in our operations.</p>
           </article>
         </div>
         <div class="col">
           <article class="h-100 p-4 bg-white border-top border-4 border-info">
             <span class="priority-icon waste-icon" aria-hidden="true"><i class="bi bi-recycle"></i></span>
-            <h3 class="h4">Waste</h3>
-            <p class="mb-0">Reducing waste through reuse, recycling, and more resource-efficient manufacturing.</p>
+            <h3 class="h4" data-ar="النفايات">Waste</h3>
+            <p class="mb-0" data-ar="نحد من النفايات عبر إعادة الاستخدام والتدوير وتحسين كفاءة التصنيع في استخدام الموارد.">Reducing waste through reuse, recycling, and more resource-efficient manufacturing.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="container pb-5" aria-labelledby="faq-title">
-      <h2 id="faq-title" class="mb-4">Sustainability questions</h2>
+      <h2 id="faq-title" class="mb-4" data-ar="أسئلة عن الاستدامة">Sustainability questions</h2>
       <div class="accordion" id="sustainability-faq">
         <div class="accordion-item">
           <h3 class="accordion-header" id="faq-climate-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-climate" aria-expanded="false" aria-controls="faq-climate">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-climate" aria-expanded="false" aria-controls="faq-climate" data-ar="كيف تعمل إنتل على خفض الانبعاثات؟">
               How is Intel working to reduce emissions?
             </button>
           </h3>
           <div id="faq-climate" class="accordion-collapse collapse" aria-labelledby="faq-climate-heading" data-bs-parent="#sustainability-faq">
-            <div class="accordion-body">Intel is investing in renewable electricity, energy efficiency, and lower-emission manufacturing as part of its climate goals.</div>
+            <div class="accordion-body" data-ar="تستثمر إنتل في الكهرباء المتجددة وكفاءة الطاقة والتصنيع الأقل انبعاثًا ضمن أهدافها المناخية.">Intel is investing in renewable electricity, energy efficiency, and lower-emission manufacturing as part of its climate goals.</div>
           </div>
         </div>
         <div class="accordion-item">
           <h3 class="accordion-header" id="faq-water-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-water" aria-expanded="false" aria-controls="faq-water">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-water" aria-expanded="false" aria-controls="faq-water" data-ar="ما جهود إنتل في الحفاظ على المياه؟">
               What are Intel's water stewardship efforts?
             </button>
           </h3>
           <div id="faq-water" class="accordion-collapse collapse" aria-labelledby="faq-water-heading" data-bs-parent="#sustainability-faq">
-            <div class="accordion-body">Intel works to conserve water in its operations and support water restoration projects in the communities where it operates.</div>
+            <div class="accordion-body" data-ar="تعمل إنتل على ترشيد المياه في عملياتها ودعم مشروعات استعادة المياه في المجتمعات التي تعمل فيها.">Intel works to conserve water in its operations and support water restoration projects in the communities where it operates.</div>
           </div>
         </div>
       </div>
@@ -246,16 +247,16 @@
       <div class="container">
         <div class="row align-items-center g-4">
           <div class="col-md-5">
-            <p class="eyebrow">Stay informed</p>
-            <h2 id="newsletter-title">Intel sustainability updates</h2>
-            <p class="mb-0">Get news about our sustainability goals and progress.</p>
+            <p class="eyebrow" data-ar="ابقَ على اطلاع">Stay informed</p>
+            <h2 id="newsletter-title" data-ar="مستجدات الاستدامة من إنتل">Intel sustainability updates</h2>
+            <p class="mb-0" data-ar="تعرّف على أهدافنا في الاستدامة وما نحققه من تقدم.">Get news about our sustainability goals and progress.</p>
           </div>
           <div class="col-md-7">
             <form action="#" method="post">
-              <label class="form-label" for="newsletter-email">Email address</label>
+              <label class="form-label" for="newsletter-email" data-ar="البريد الإلكتروني">Email address</label>
               <div class="input-group">
                 <input class="form-control" type="email" id="newsletter-email" name="email" dir="ltr" autocomplete="email" required>
-                <button class="btn btn-primary" type="submit">Subscribe</button>
+                <button class="btn btn-primary" type="submit" data-ar="اشترك">Subscribe</button>
               </div>
             </form>
           </div>
@@ -265,27 +266,53 @@
   </main>
   <footer class="site-footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-      <p>© 2026 Intel Corporation. All rights reserved.</p>
-      <nav aria-label="Footer navigation">
+      <p data-ar="© 2026 شركة إنتل. جميع الحقوق محفوظة.">© 2026 Intel Corporation. All rights reserved.</p>
+      <nav aria-label="Footer navigation" data-ar-label="روابط التذييل">
         <ul class="list-inline mb-0">
-          <li class="list-inline-item"><a href="#privacy-policy">Privacy Policy</a></li>
-          <li class="list-inline-item"><a href="#terms-of-use">Terms of Use</a></li>
-          <li class="list-inline-item"><a href="#contact">Contact</a></li>
+          <li class="list-inline-item"><a href="#privacy-policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+          <li class="list-inline-item"><a href="#terms-of-use" data-ar="شروط الاستخدام">Terms of Use</a></li>
+          <li class="list-inline-item"><a href="#contact" data-ar="اتصل بنا">Contact</a></li>
         </ul>
       </nav>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const directionToggle = document.getElementById('direction-toggle');
+    const languageToggle = document.getElementById('language-toggle');
+    let activeLanguage = 'en';
 
     function setReadingDirection(isRightToLeft) {
       const direction = isRightToLeft ? 'rtl' : 'ltr';
 
       document.documentElement.dir = direction;
-      directionToggle.setAttribute('aria-checked', String(isRightToLeft));
-      directionToggle.setAttribute('aria-label', `${isRightToLeft ? 'Right-to-left' : 'Left-to-right'} reading direction`);
-      directionToggle.firstElementChild.textContent = isRightToLeft ? '←' : '→';
+      document.getElementById('bootstrap-ltr').disabled = isRightToLeft;
+      document.getElementById('bootstrap-rtl').disabled = !isRightToLeft;
+      languageToggle.firstElementChild.textContent = isRightToLeft ? '←' : '→';
+    }
+
+    function setLanguage(language) {
+      const isArabic = language === 'ar';
+      activeLanguage = isArabic ? 'ar' : 'en';
+      document.documentElement.lang = activeLanguage;
+
+      document.querySelectorAll('[data-ar]').forEach(function (element) {
+        if (!element.hasAttribute('data-en')) element.dataset.en = element.textContent.trim();
+        element.textContent = isArabic ? element.dataset.ar : element.dataset.en;
+      });
+
+      document.querySelectorAll('[data-ar-alt]').forEach(function (element) {
+        if (!element.hasAttribute('data-en-alt')) element.dataset.enAlt = element.alt;
+        element.alt = isArabic ? element.dataset.arAlt : element.dataset.enAlt;
+      });
+
+      document.querySelectorAll('[data-ar-label]').forEach(function (element) {
+        if (!element.hasAttribute('data-en-label')) element.dataset.enLabel = element.getAttribute('aria-label');
+        element.setAttribute('aria-label', isArabic ? element.dataset.arLabel : element.dataset.enLabel);
+      });
+
+      setReadingDirection(isArabic);
+      languageToggle.setAttribute('aria-checked', String(isArabic));
+      languageToggle.setAttribute('aria-label', isArabic ? 'التبديل إلى الإنجليزية' : 'Switch language to Arabic');
     }
 
     function detectReadingDirection() {
@@ -295,22 +322,29 @@
 
       if (translationClasses.includes('translated-rtl')) {
         setReadingDirection(true);
+        languageToggle.setAttribute('aria-checked', 'true');
         return;
       }
 
       if (translationClasses.includes('translated-ltr')) {
         setReadingDirection(false);
+        languageToggle.setAttribute('aria-checked', 'false');
         return;
       }
 
       const language = (body.getAttribute('lang') || root.getAttribute('lang') || '').toLowerCase();
-      const languageCode = language.split('-')[0];
+      const languageCode = language.split(/[-_]/)[0];
       const rightToLeftLanguages = new Set(['ar', 'arc', 'ckb', 'dv', 'fa', 'he', 'ks', 'ku', 'ps', 'sd', 'ug', 'ur', 'yi']);
-      setReadingDirection(rightToLeftLanguages.has(languageCode));
+      const isRightToLeft = rightToLeftLanguages.has(languageCode);
+      setReadingDirection(isRightToLeft);
+
+      if ((languageCode === 'ar' || languageCode === 'en') && activeLanguage !== languageCode) {
+        setLanguage(languageCode);
+      }
     }
 
-    directionToggle.addEventListener('click', function () {
-      setReadingDirection(this.getAttribute('aria-checked') !== 'true');
+    languageToggle.addEventListener('click', function () {
+      setLanguage(activeLanguage === 'ar' ? 'en' : 'ar');
     });
 
     const languageObserver = new MutationObserver(function (mutations) {
